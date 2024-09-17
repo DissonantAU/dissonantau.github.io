@@ -1,2 +1,5 @@
 theme: jekyll-theme-minimal
-title: Dissonant AU - Homepage
+title: Homepage
+
+timezone: Australia/Sydney
+encoding: utf-8
