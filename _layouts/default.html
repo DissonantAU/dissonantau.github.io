@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="{{ site.lang | default: 'en-US' }}">
   <head>
+    <title>{{ page.title | default: site.title | default: site.github.repository_name }}</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-{% seo %}
+    {% seo %}
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     <script src="{{ '/assets/js/respond.js' | relative_url }}"></script>
@@ -19,33 +19,53 @@
   </head>
   <body>
       <div id="header">
-        <nav>
-          <ul>
-            <li class="fork"><a href="{{ site.github.repository_url }}">View On GitHub</a></li>
-            {% if site.show_downloads %}
-              <li class="downloads"><a href="{{ site.github.zip_url }}">ZIP</a></li>
-              <li class="downloads"><a href="{{ site.github.tar_url }}">TAR</a></li>
-              <li class="title">DOWNLOADS</li>
-            {% endif %}
-          </ul>
-        </nav>
+          <nav>
+              <ul>
+                  {% if site.show_repo_link or page.show_repo_link %}
+                    <li class="fork">
+                      <a href="{{ page.repository_url | default: site.repository_url | default: site.github.repository_url }}">View On GitHub</a>
+                    </li>
+                  {% endif %}
+
+                  {% if site.show_latest_release or page.show_latest_release %}
+                    <li class="downloads">
+                      <a href="{{ page.latest_release_url | default: site.latest_release_url }}">Latest Release {{ page.latest_release_version | default: site.latest_release_version }}</a>
+                    </li>
+                  {% endif %}
+
+                  {% if site.show_downloads or page.show_downloads %}
+                    {% if site.show_downloads_zip or page.show_downloads_zip %}
+                      <li class="downloads"><a href="{{ page.zip_url | default: site.zip_url | default: site.github.zip_url }}">ZIP</a></li>
+                    {% endif %}
+                    {% if site.show_downloads_tar or page.show_downloads_tar %}
+                      <li class="downloads"><a href="{{ page.tar_url | default: site.tar_url | default: site.github.tar_url }}">TAR</a></li>
+                    {% endif %}
+                    <li class="title">DOWNLOADS</li>
+                  {% endif %}
+              </ul>
+          </nav>
       </div><!-- end header -->
 
-    <div class="wrapper">
+      <div class="wrapper">
+          <section>
+              <div id="title">
+                  <h1>{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
+                  <p>{{ page.description | default: site.description | default: site.github.project_tagline }}</p>
+                  <hr>
+              </div>
 
-      <section>
-        <div id="title">
-          <h1>{{ site.title | default: site.github.repository_name }}</h1>
-          <p>{{ site.description | default: site.github.project_tagline }}</p>
-          <hr>
-          <span class="credits left">Project maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/mattgraham">mattgraham</a></span>
-        </div>
+              <div id="content">{{ content }}</div>
 
-        {{ content }}
-
-      </section>
-
-    </div>
+              <div id="footer">
+                  <hr>
+                  <span class="credits left">Project maintained by <a
+                          href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>
+                      </span>
+                  <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a
+                          href="https://twitter.com/mattgraham">mattgraham</a>
+                      </span>
+              </div>
+          </section>
+      </div>
   </body>
 </html>

@@ -1,6 +1,8 @@
-# dissonantau.github.io
-
-Welcome to my GitHub projects site, you can find info and download links below.
+---
+layout: default
+title: DissonantAU's GitHub projects site
+description: You can find info and download links for my projects below
+---
 
 ## Projects
 
