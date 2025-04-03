@@ -11,10 +11,10 @@ latest_release_url: https://github.com/DissonantAU/VeadotubeTouchPortalPlugin/re
 latest_release_version: 0.7.1-beta
 ---
 
-![Made for Touch Portal](https://www.touch-portal.com/press/logo/madeForTPWhite256.png)
+_This is an **unofficial plugin**, please don't harass the devs of either program if you have issues with the plugin._  
+_This Plugin is free, but you need to buy the Touch Portal Pro upgrade to install and use Plugins._
 
-_This is an unofficial plugin, please don't harass the devs of either program if you have issues with the plugin._  
-_This Plugin is free, but you need to buy the Touch Portal Pro upgrade install and use Plugins._
+[![Made for Touch Portal](img/logos/madeForTPWhite_256.png)](https://www.touch-portal.com)
 
 ## Table of Contents
 
@@ -37,7 +37,7 @@ _This Plugin is free, but you need to buy the Touch Portal Pro upgrade install a
 
 ## Requirements
 
-- Java 8 Runtime or higher
+- Java 8 Runtime or later
 - Touch Portal (The pro upgrade bought through the Android/iOS Store needed to use Plugins)
 - Veadotube Mini v2.0 or higher (Older versions are NOT supported)
 
@@ -48,7 +48,7 @@ The [latest version](https://github.com/DissonantAU/VeadotubeTouchPortalPlugin/r
 - Beta release - stable enough for general use but testing is ongoing.
 - Tested with **veadotube mini v2.0a** and **veadotube mini v2.1**
 - The following features are planned before 1.0 release
-  - New Version Notification
+  - Update Notification
   - Actions for controlling specific named instances
 
 All releases are [available here](https://github.com/DissonantAU/VeadotubeTouchPortalPlugin/releases).
@@ -75,19 +75,25 @@ The easiest way to get help is to ask in the [Touch Portal Discord](https://disc
 ## How to use
 
 ### Install Plugin
-- Download the latest release from GitHub
-- Import the plugin into Touch Portal on the computer Veadotube is running on
-  ![Screenshot of Touch Portal Plugin Screen](img/plugin-import-1.png)
-- Touch Portal will show a warning, asking if you want to allow the Plugin to run.  
+1. Download the latest release from GitHub
+   - There are 2 Versions: 'Regular' and 'Internal'/'Bundled' Java.
+     - 'Regular' Requires Java 8 or later installed and works on Windows/MacOS/Linux.
+       - **If in doubt, install Java and use this version.**
+     - 'Internal Java' uses the version of Java Bundled with Touch Portal (JRE 17).
+         - Doesn't require Java installed separately and tends to use less CPU and Memory.
+         - This is tested as working on Windows, but MacOS and Linux _may_ have issues.
+2. Import the plugin into Touch Portal on the computer Veadotube is running on
+  ![Screenshot of Touch Portal Plugin Screen](img/screenshots/plugin-import-1.png)
+3. Touch Portal will show a warning, asking if you want to allow the Plugin to run.  
   Select **Yes** or **Trust Always** to let it run
   **Yes** will make Touch Portal ask you again each time it starts  
-  ![Screenshot of Touch Portal Plugin Warning](img/plugin-import-2.png)
+  ![Screenshot of Touch Portal Plugin Warning](img/screenshots/plugin-import-2.png)
 
 
 
 ### Plugin Settings
 _These are optional, but you may want to enable **Auto Request Current State Thumbnail**_
-![Screenshot of Veadotube Plugin Settings Panel in Touch Portal](img/plugin-options.png)
+![Screenshot of Veadotube Plugin Settings Panel in Touch Portal](img/screenshots/plugin-options.png)
 
 **Primary Instance Name Override**  
 If you run more than one copy of Veadotube and have changed the window title, you can enter it here to force the plugin to control it.  
@@ -98,7 +104,7 @@ If you want a Button to show the thumbnail current Avatar State, type 'enable' a
 
 
 **Example:**  
-![Screenshot of Touch Portal Plugin Screen with example settings](img/plugin-settings-example.png)
+![Screenshot of Touch Portal Plugin Screen with example settings](img/screenshots/plugin-settings-example.png)
 
 Only one copy of Veadotube Mini is running, it has the default title.  
 Enable has been entered for Request Thumbnail
@@ -110,7 +116,7 @@ Enable has been entered for Request Thumbnail
 
 The example page and the examples below use one of the default avatars, O Gato by BELLA!  
 You can find it in Veadotube Mini by clicking _Avatar Settings > Load Default Avatar..._  
-![Screenshot of the Example Touch Portal Page on Android](img/example_button_adv_2.png)
+![Screenshot of the Example Touch Portal Page on Android](img/screenshots/example_button_adv_2.png)
 
 
 
@@ -126,27 +132,27 @@ The Plugin Actions can be found under **Veadotube - Primary Instance**
 3. Set the avatar you want this button to activate. 
    - If using **Set Avatar State from List**, click the dropdown arrow to show all the current Avatars.
      You will see the state name, or number assigned by veadotube if you didn't set one.  
-    ![Screenshot of the Touch Portal showing 'Set Avatar State to' and a dropdown list with Avatar States](img/example_button_1.png)
+    ![Screenshot of the Touch Portal showing 'Set Avatar State to' and a dropdown list with Avatar States](img/screenshots/example_button_1.png)
    - Alternatively if you're using **Set Avatar State by Name**, you can copy & paste the State name from veadotube into the text box.  
-    ![Screenshot of the Touch Portal showing 'Set Avatar to State with Name' and a text box with the name #3](img/example_button_2.png)  
+    ![Screenshot of the Touch Portal showing 'Set Avatar to State with Name' and a text box with the name #3](img/screenshots/example_button_2.png)  
 
    **Note:** Changing the name of a State in veadotube will break your Touch Portal buttons - you will need to come back and update the buttons of any you change.
 
 4. Set the Button Text, Background, etc.  
-   ![Closer Screenshot of the Touch Portal showing a button labeled "Change to #1" 'Set Avatar State to' with State #1 selected](img/example_button_3.png)
+   ![Closer Screenshot of the Touch Portal showing a button labeled "Change to #1" 'Set Avatar State to' with State #1 selected](img/screenshots/example_button_3.png)
 
 5. Repeat with other buttons
 
-![Screenshot of Veadotube with State #2 selected and open so the State Name is visible](img/example_button_4.png)
+![Screenshot of Veadotube with State #2 selected and open so the State Name is visible](img/screenshots/example_button_4.png)
 _Opening the avatar state in veadotube shows the name box - you can copy this into Touch Portal text boxes_
 
 You can now press the buttons and change the active avatar!  
 Note: Here **When Plug-in state changes** has been used to make the buttons reactive - If you want buttons to change with the state, even when changed directly in veadotube, see under _Advanced Buttons_ below
 
-![Screenshot of the Example Touch Portal Page on Android with 3 Example Change Buttons. State #3 showing as an Icon](img/example_button_adv_4.png)
+![Screenshot of the Example Touch Portal Page on Android with 3 Example Change Buttons. State #3 showing as an Icon](img/screenshots/example_button_adv_4.png)
 _After Pressing Button #3_
 
-![Screenshot of the Example Touch Portal Page on Android with 3 Example Change Buttons. Now State #1 showing as an Icon](img/example_button_adv_2.png)
+![Screenshot of the Example Touch Portal Page on Android with 3 Example Change Buttons. Now State #1 showing as an Icon](img/screenshots/example_button_adv_2.png)
 _After Pressing Button #1_
 
 
@@ -157,7 +163,7 @@ You can set up the buttons to react to the Avatar State Changing - this also wor
 Add:
 1. _Event: When Plugin State Changes_  
    Choose _Veadotube Plugin > Primary Instance > Current Avatar State - Name_  
-   ![Screenshot of the Touch Portal showing 'When the plugin State' event as Current State Avatar - Name changed to #1 and the Change Button Visuals action set to change the background colour to Green and Gray. A Do not Change to #1 Event has the 'Restore Button visuals for' 'Background settings' inside](img/example_button_adv_1.png)
+   ![Screenshot of the Touch Portal showing 'When the plugin State' event as Current State Avatar - Name changed to #1 and the Change Button Visuals action set to change the background colour to Green and Gray. A Do not Change to #1 Event has the 'Restore Button visuals for' 'Background settings' inside](img/screenshots/example_button_adv_1.png)
 
 2. Set the 2nd box to 'changes to' and the 3rd to the Avatar Name (you can copy and paste this from veadotube)
 
@@ -169,10 +175,10 @@ Add:
 
 Now you can see which avatar is active by the button that's highlighted
 
-![Screenshot of the Example Touch Portal Page on Android with 3 Example Change Buttons. Change to #1 Button is Green-Gray and State #1 showing as an Icon](img/example_button_adv_3.png)
+![Screenshot of the Example Touch Portal Page on Android with 3 Example Change Buttons. Change to #1 Button is Green-Gray and State #1 showing as an Icon](img/screenshots/example_button_adv_3.png)
 _Avatar State #1 is Active_
 
-![Screenshot of the Example Touch Portal Page on Android with 3 Example Change Buttons. Change to #3 Button is Green-Gray and State #3 showing as an Icon](img/example_button_adv_4.png)
+![Screenshot of the Example Touch Portal Page on Android with 3 Example Change Buttons. Change to #3 Button is Green-Gray and State #3 showing as an Icon](img/screenshots/example_button_adv_4.png)
 _Avatar State #3 is Active_
 
 
@@ -183,13 +189,13 @@ You can create this by adding:
 1. Event: When Plugin State Changes  
    Choose _Veadotube Plugin > Primary Instance > Current Avatar State - Thumbnail_
 
-   ![Screenshot of the Touch Portal showing 'When the plugin State' event and the plugin state dropdown open to 'Veadotube Plugin', 'Veadotube Primary Instance' and 'Current Avatar State - Thumbnail' highlighted](img/example_button_icon_1.png)
+   ![Screenshot of the Touch Portal showing 'When the plugin State' event and the plugin state dropdown open to 'Veadotube Plugin', 'Veadotube Primary Instance' and 'Current Avatar State - Thumbnail' highlighted](img/screenshots/example_button_icon_1.png)
 
    Set the 2nd box to _does not change to_, and leave the 3rd box blank
-   ![Screenshot of the Touch Portal showing 'When the plugin State' event, the plugin state 'Current Avatar State - Thumbnail' chosen, 'does not change to' chosen and a blank text box](img/example_button_icon_2.png)
+   ![Screenshot of the Touch Portal showing 'When the plugin State' event, the plugin state 'Current Avatar State - Thumbnail' chosen, 'does not change to' chosen and a blank text box](img/screenshots/example_button_icon_2.png)
 
 2. Inside the Event, add _Change visuals by Plugin State_ and select _Icon_ and _Current Avatar State - Thumbnail_  
-   ![Screenshot of the Touch Portal showing 'When the plugin State' event with Change Visuals by plug-in state action. It is set to change the Icon with the value from "Current Avatar State - Thumbnail"](img/example_button_icon_3.png)
+   ![Screenshot of the Touch Portal showing 'When the plugin State' event with Change Visuals by plug-in state action. It is set to change the Icon with the value from "Current Avatar State - Thumbnail"](img/screenshots/example_button_icon_3.png)
 
 Now the Icon will change when the Avatar does - even if it's changed directly in the app!
 
@@ -202,10 +208,10 @@ Add:
 1. _Event: When Plugin State Changes_
 
    Choose _Veadotube Plugin > Primary Instance > Current Avatar State - Name_
-   ![Screenshot of the Touch Portal showing 'When the plugin State' event as 'Current State Avatar - Name' does not change to blank and the Change Button Visuals action set to change Text. The Text Box is empty](img/example_button_name_1.png)
+   ![Screenshot of the Touch Portal showing 'When the plugin State' event as 'Current State Avatar - Name' does not change to blank and the Change Button Visuals action set to change Text. The Text Box is empty](img/screenshots/example_button_name_1.png)
 
 2. Add a _Change Button Visuals_ action inside the event and set it to use the Name to change the button text
-   ![Screenshot of the Touch Portal showing 'When the plugin State' event as 'Current State Avatar - Name' does not change to blank and the Change Button Visuals action set to change Text. The Variable selector is open to Veadotube Plugin, Primary Instance, 'Current Avatar State - Name'](img/example_button_name_2.png)
+   ![Screenshot of the Touch Portal showing 'When the plugin State' event as 'Current State Avatar - Name' does not change to blank and the Change Button Visuals action set to change Text. The Variable selector is open to Veadotube Plugin, Primary Instance, 'Current Avatar State - Name'](img/screenshots/example_button_name_2.png)
    _You can add other Text to the change action as well_
 
 The Button should now show the current active Avatar Name
@@ -213,13 +219,16 @@ The Button should now show the current active Avatar Name
 
 #### Advanced - Custom JSON Requests
 You can send custom JSON Messages to the API, useful if you want to use an API feature that's not supported directly by this plugin
-![Screenshot of the Touch Portal showing 'Send Custom JSON Request' with 'nodes' in the channel text box and a JSON Message String to set the avatar state to '#2'](img/example_button_5.png)
+![Screenshot of the Touch Portal showing 'Send Custom JSON Request' with 'nodes' in the channel text box and a JSON Message String to set the avatar state to '#2'](img/screenshots/example_button_5.png)
 _In this example you can see a Custom JSON Request to set the avatar state to '#2' to be sent to the 'nodes' channel_
 
 
 
 #### Advanced - Plugin Refresh Buttons
-You can create buttons to Force a refresh as well
-![Screenshot of the Touch Portal showing 'Refresh Avatar State List' and 'Refresh Current Avatar State' Actions under On Pressed Actions](img/example_button_refresh_1.png)  
-You won't need these normally, but it can be useful if you're running veadotube mini 2.0a and changing the order/images/names of Avatar States and want to refresh without restarting either Touch Portal of Veadotube.  
-From mini 2.1 the Plugin will receive an update if there's a change to any States.
+You can create buttons to Force a refresh of the State List or current State.  
+![Screenshot of the Touch Portal showing 'Refresh Avatar State List' and 'Refresh Current Avatar State' Actions under On Pressed Actions](img/screenshots/example_button_refresh_1.png)  
+You won't need these normally:
+- The Plugin will be told when the State is switched (any veadotube version).  
+- Newer versions (mini 2.1+) send API updates when a State is _edited_ (e.g. order/name/image changed), so state lists will update automatically.  
+- Older versions (e.g. mini 2.0a) need to be forced to refresh State Lists using this command after edits, or by restarting either Touch Portal or veadotube.  
+
